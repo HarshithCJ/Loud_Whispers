@@ -7,3 +7,65 @@ Description: The Loud Whispers theme for WordPress takes us back to the Customis
 Tags: Customised Chocolate Theme, Custom Chocolate, Corporate Gifts,Special Occasion gifts with images.
 Text Domain: LoudWhispers
 */
+body{
+    font-family: 'Raleway', sans-serif;
+}
+.container{
+    padding-top:15px !important;
+} 
+.mail_to::before{
+    content: "\f0e0";
+    font-family: FontAwesome;
+    font-size: 16px;
+    padding-right: 8px;
+    color: #ff9933;
+}
+.mail_to{
+    text-decoration: none;
+    font-size: 16px;
+    color: #333333;
+    font-family: 'Open Sans', sans-serif;
+    float: left;
+}
+.mail_to:hover{
+    text-decoration: none;
+    font-size: 16px;
+    color: #333333;
+    font-family: 'Open Sans', sans-serif;
+}
+.social_icons{
+    padding-right: 8px;
+}
+.social_group{
+    float: right;
+    margin-top: -8px;
+}
+.logo{
+    text-align: center;
+}
+.container-fluid{
+    padding: 0px !important;
+}
+.menu-top_menus-container{
+    background-color: #ffcc00;
+    height: 80px;
+}
+.menu-top_menus-container ul.menu li.menu-item a{
+    text-decoration: none;
+    color: #330000;
+
+}
+.menu-top_menus-container ul.menu{
+    list-style: none;
+    text-align: center;
+    padding-top: 25px;
+    margin-top: 25px;
+}
+.menu-top_menus-container ul.menu li.menu-item{
+    display: inline;
+    font-size: 18px;
+    text-transform:uppercase;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    padding-right: 25px;
+}
