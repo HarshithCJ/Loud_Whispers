@@ -36,6 +36,10 @@ body{
 .social_icons{
     padding-right: 8px;
 }
+.social_icons img{
+    width: 32px;
+    height: auto;
+}
 .social_group{
     float: right;
     margin-top: -8px;
@@ -52,13 +56,12 @@ body{
 }
 .menu-top_menus-container ul.menu li.menu-item a{
     text-decoration: none;
-    color: #330000;
-
+    color: #000000;
 }
 .menu-top_menus-container ul.menu{
     list-style: none;
     text-align: center;
-    padding-top: 25px;
+    padding-top: 29px;
     margin-top: 25px;
 }
 .menu-top_menus-container ul.menu li.menu-item{
@@ -67,5 +70,92 @@ body{
     text-transform:uppercase;
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
-    padding-right: 25px;
+    padding: 12px;
+    margin-right: 25px;
 }
+.lw_footer{
+    background-color: #111111;
+}
+.lw_footer ul{
+    list-style: none;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
+.lw_footer ul li{
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding-bottom: 5px;
+}
+.lw_footer ul li a{
+    text-decoration: none;
+    color: #b8b8b8;
+}
+.lw_footer ul li a:hover{
+    color: #ffcc00;
+}
+.lw_social ul li{
+    display: inline;
+    padding-right: 12px;
+    font-size: 16px; 
+}
+.copyright{
+    background-color: #333333;
+    text-align: center;
+}
+.copyright .contents_footer{
+    color: #fff;
+    padding: 15px;
+}
+.menu-item{
+    position: relative;
+}
+/* Outside */
+.menu-item::before, .menu-item::after{
+    content:"";
+    width: 0;
+    height: 2px;
+    position: absolute;
+    transition: all 0.2s linear;
+    background: #330000;
+  }
+/* Inside */
+.menu-item a::before, .menu-item a::after{
+    content:"";
+    width:2px;
+    height:0;
+    position: absolute;
+    transition: all 0.2s linear;
+    background: #330000;
+  }
+  /* Hover effect */
+  .menu-item:hover::before, .menu-item:hover::after{
+    width: 100%;
+  }
+  .menu-item:hover a::before, .menu-item:hover a::after{
+    height: 100%;
+  }
+  /* Positioning lines */
+  .menu-item::after{
+    right:0;
+    bottom: 0;
+    transition-duration: 0.4s;
+  }
+  .menu-item a::after{
+    right:0;
+    bottom: 0;
+    transition-duration: 0.4s;
+  } 
+
+  .menu-item::before{
+    left: 0;
+    top: 0;
+    transition-duration: 0.4s;
+  }
+  
+  .menu-item a::before{
+    left: 0;
+    top: 0;
+    transition-duration: 0.4s;
+  } 
