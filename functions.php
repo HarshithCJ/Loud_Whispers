@@ -51,4 +51,11 @@ function wpb_headerimage_init(){
 add_action('widgets_init', 'wpb_headerimage_init');
 
 
+<<<<<<< HEAD
+=======
+// slideshow plugin creation
+
+
+
+>>>>>>> a93e77a7aac74fb2cf3c28f886de1ea56b08b473
 ?>
