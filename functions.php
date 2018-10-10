@@ -49,4 +49,10 @@ function wpb_headerimage_init(){
     ));
 }
 add_action('widgets_init', 'wpb_headerimage_init');
+
+
+// slideshow plugin creation
+
+
+
 ?>
