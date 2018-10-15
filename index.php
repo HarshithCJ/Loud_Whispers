@@ -53,7 +53,25 @@
                 
                 ?>
             </div>
+            <!-- End Timeline -->
         </div>
+        
+        <div class="header_title2 for_spacing1">
+            <h1>
+            <?php 
+                if ( is_active_sidebar( 'category_title' ) ) : ?>
+                <div id="header-widget-area" class="chw-widget-area widget-area" role="complementary">
+                    <?php dynamic_sidebar( 'category_title' ); ?>
+                </div>
+            <?php endif;  ?>
+            </h1>
+        </div>
+                
+        <div class="category">
+        <?php echo do_shortcode('[product_categories limit="4" columns="2"]'); 
+        ?>
+        </div>
+
     <?php endif; ?>
 <?php get_footer() ?>
 <?php get_sidebar() ?>
