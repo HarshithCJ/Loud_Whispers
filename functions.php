@@ -70,6 +70,20 @@ function wpb_headtitle_init(){
 }
 add_action('widgets_init', 'wpb_headtitle_init');
 
+//header text2
+function wpb_categorytitle_init(){
+    register_sidebar(array(
+     'name' =>  'Category Title',
+     'id'   =>  'category_title',
+     'before_widget' => '<div class="chw-widget">',
+     'after_widget'  => '</div>',
+     'before_title'  => '<h2 class="chw-title">',
+     'after_title'   => '</h2>',
+
+    ));
+}
+add_action('widgets_init', 'wpb_categorytitle_init');
+
 //custom post type
 function timeline_custom_post_type(){
     $labels = array(
@@ -247,4 +261,9 @@ function save_your_fields_meta( $post_id ) {
     }
     add_action( 'save_post', 'save_your_fields_meta' );
 
+    //Hide category product count 
+    add_filter( 'woocommerce_subcategory_count_html', '__return_false' );
+
+    //product desc
+    
 ?>
