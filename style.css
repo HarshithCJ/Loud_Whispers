@@ -280,6 +280,7 @@ body{
 .category h2{
     margin-top: 25px !important;
 }
-.category li.product:hover{
-    
+.product:first-child .description_category{
+    position: absolute;
+    top: 0;
 }
