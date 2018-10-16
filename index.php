@@ -68,10 +68,14 @@
         </div>
                 
         <div class="category">
-        <?php echo do_shortcode('[product_categories limit="4" columns="2"]'); 
+        <?php echo do_shortcode('[product_categories limit="4" columns="2" taxonomies="product_cat"]'); 
         ?>
+        <div class="category_desc"><?php echo do_shortcode('[wpb_categories]')?></div>
         </div>
-
+        <script>
+            
+            $( ".category_desc li:first-child" ).insertAfter( $( ".product:first-child h2" ) );
+        </script>
     <?php endif; ?>
 <?php get_footer() ?>
 <?php get_sidebar() ?>
