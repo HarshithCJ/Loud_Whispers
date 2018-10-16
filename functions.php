@@ -265,5 +265,17 @@ function save_your_fields_meta( $post_id ) {
     add_filter( 'woocommerce_subcategory_count_html', '__return_false' );
 
     //product desc
-    
+    function wpb_catlist_desc() { 
+        $string = '<ul class="cat_desc">';
+        $catlist = get_terms( 'product_cat' );
+        if ( ! empty( $catlist ) ) {
+          foreach ( $catlist as $key => $item ) {
+            $string .= '<li class="description_category">'. $item->description . '</li>';
+          }
+        }
+        $string .= '</ul>';
+         
+        return $string; 
+        }
+        add_shortcode('wpb_categories', 'wpb_catlist_desc');
 ?>
