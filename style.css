@@ -268,6 +268,7 @@ body{
     height: 310px;
     outline: 2px solid white;
     outline-offset: -15px;
+    position: relative;
 }
 .category .woocommerce ul.products li.product, .woocommerce-page ul.products li.product{
     margin: 15px 10px !important;
@@ -280,7 +281,43 @@ body{
 .category h2{
     margin-top: 25px !important;
 }
-.product:first-child .description_category{
+.description_category1,.description_category2,.description_category3,.description_category4{
     position: absolute;
-    top: 0;
+    top: 25%;
+    max-width: 80%;
+    left: 10%;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    color: #ffffff
 }
+.desc_cat_container1,.desc_cat_container2,.desc_cat_container3,.desc_cat_container4 {
+    position: absolute;
+    height: 80%;
+    width: 90%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #340B01;
+    margin: 0px 27px;
+    top: 0;
+  }
+  .category .product:hover .desc_cat_container1,.category .product:hover .desc_cat_container2,.category .product:hover .desc_cat_container3,.category .product:hover .desc_cat_container4 {
+    opacity: 0.8;
+  }
+  .category_after_image{
+      max-height: 110px;
+      overflow: hidden;
+  }
+  .category_after_image img{
+      width: 100%
+  }
+  .textimagonials{
+      position: relative;
+  }
+  .category_after_text{
+    position: absolute;
+    top: 15%;
+    font-size: 40px;
+    font-family: 'Raleway', sans-serif;
+    color: #ffffff;
+    left: 35%;
+  }
