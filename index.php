@@ -100,7 +100,21 @@
                 <?php endif;  ?>
             </div>
         </div>
+
         <div class="container">
+        <div class="header_title2 for_spacing1">
+            <h1>
+            <?php 
+                if ( is_active_sidebar( 'testimonials_title' ) ) : ?>
+                <div id="header-widget-area" class="chw-widget-area widget-area" role="complementary">
+                    <?php dynamic_sidebar( 'testimonials_title' ); ?>
+                </div>
+            <?php endif;  ?>
+            </h1>
+        </div>
+        <div class="testimonials">
+        <?php echo do_shortcode('[sp_testimonial id="145"]'); ?>
+        </div>
     <?php endif; ?>
 <?php get_footer() ?>
 <?php get_sidebar() ?>
