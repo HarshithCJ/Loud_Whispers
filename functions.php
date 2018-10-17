@@ -270,7 +270,7 @@ function save_your_fields_meta( $post_id ) {
         $catlist = get_terms( 'product_cat' );
         if ( ! empty( $catlist ) ) {
           foreach ( $catlist as $key => $item ) {
-            $string .= '<li class="description_category">'. $item->description . '</li>';
+            $string .= '<div class="desc_cat_container'.$key.'"><li class="description_category'.$key.'">'. $item->description . '</li></div>';
           }
         }
         $string .= '</ul>';
@@ -278,4 +278,32 @@ function save_your_fields_meta( $post_id ) {
         return $string; 
         }
         add_shortcode('wpb_categories', 'wpb_catlist_desc');
+
+        //image after categories
+    function wpb_categoryafter_image_init(){
+        register_sidebar(array(
+        'name' =>  'Image After Category',
+        'id'   =>  'image_after_category',
+        'before_widget' => '<div class="chw-widget">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h2 class="chw-title">',
+        'after_title'   => '</h2>',
+
+        ));
+    }
+    add_action('widgets_init', 'wpb_categoryafter_image_init');
+
+        //Text after categories
+        function wpb_categoryafter_text_init(){
+            register_sidebar(array(
+            'name' =>  'Text After Category',
+            'id'   =>  'text_after_category',
+            'before_widget' => '<div class="chw-widget">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h2 class="chw-title">',
+            'after_title'   => '</h2>',
+    
+            ));
+        }
+        add_action('widgets_init', 'wpb_categoryafter_text_init');
 ?>
