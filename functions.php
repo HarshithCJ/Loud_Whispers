@@ -306,4 +306,18 @@ function save_your_fields_meta( $post_id ) {
             ));
         }
         add_action('widgets_init', 'wpb_categoryafter_text_init');
+
+        //Testimonials
+        function wpb_testimonials_text_init(){
+            register_sidebar(array(
+            'name' =>  'Testimonials Title',
+            'id'   =>  'testimonials_title',
+            'before_widget' => '<div class="chw-widget">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h2 class="chw-title">',
+            'after_title'   => '</h2>',
+    
+            ));
+        }
+        add_action('widgets_init', 'wpb_testimonials_text_init');
 ?>
