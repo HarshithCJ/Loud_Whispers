@@ -73,9 +73,34 @@
         <div class="category_desc"><?php echo do_shortcode('[wpb_categories]')?></div>
         </div>
         <script>
-            
-            $( ".category_desc li:first-child" ).insertAfter( $( ".product:first-child h2" ) );
+            $( ".category_desc .desc_cat_container1" ).insertAfter( $( ".first:nth-child(1) h2" ) );
+            $( ".category_desc .desc_cat_container2" ).insertAfter( $( ".last:nth-child(2) h2" ) );
+            $( ".category_desc .desc_cat_container3" ).insertAfter( $( ".first:nth-child(3) h2" ) );
+            $( ".category_desc .desc_cat_container4" ).insertAfter( $( ".last:nth-child(4) h2" ) );
         </script>
+
+        </div>
+        <div class="container-fluid textimagonials">
+        <!-- category after image -->
+            <div class="category_after_image">
+                <?php 
+                if ( is_active_sidebar( 'image_after_category' ) ) : ?>
+                <div id="header-widget-area" class="chw-widget-area widget-area" role="complementary">
+                <?php dynamic_sidebar( 'image_after_category' ); ?>
+                </div>
+                <?php endif;  ?>
+            </div>
+
+            <div class="category_after_text">
+                <?php 
+                if ( is_active_sidebar( 'text_after_category' ) ) : ?>
+                <div id="header-widget-area" class="chw-widget-area widget-area" role="complementary">
+                <?php dynamic_sidebar( 'text_after_category' ); ?>
+                </div>
+                <?php endif;  ?>
+            </div>
+        </div>
+        <div class="container">
     <?php endif; ?>
 <?php get_footer() ?>
 <?php get_sidebar() ?>
